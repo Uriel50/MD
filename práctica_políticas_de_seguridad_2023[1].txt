@@ -1,0 +1,3667 @@
+Práctica: Desarrollo de políticas de
+seguridad
+
+A continuación, se brinda la información de la EMPRESA_TI a partir de la cual se deberán
+construir las Políticas de seguridad en los siguientes rubros:
+
+1 Política de autenticación y control de accesos
+2 Política de clasificación, respaldo y borrado de información
+3 Política de protección de equipo y redes internas
+4 Política de Seguridad de la información
+5 Política de seguridad física
+6 Política de uso de las instalaciones
+7 Política de usuarios y contraseñas
+7 Política de código de conducta
+
+Se hace una descripción de la empresa, se entrega un perfil de los usuarios que están involucrados
+y finalmente se entrega un Análisis de Riesgos a partir del cual se deberán redactar las políticas
+necesarias para satisfacer los rubros arriba mencionados.
+
+1
+
+LA EMPRESA
+
+2
+
+El presente proyecto trata de la elaboración de un plan de seguridad integral al interior
+de una empresa de Tecnología de la Información llamada EMPRESA_TI, la cual posee,
+entre otros servicios, un centro pequeño de cómputo al que destina como función de
+cibercafé. La empresa dispone de este centro de cómputo como un medio a través del
+cual puede mostrar el rendimiento de sus equipos (la empresa tiene en sus líneas de
+negocio la venta de hardware, software, actualización de equipos de cómputo, seguridad,
+entre otros) y servir como medio de mercadotecnia que, en palabras de su dueño, ha
+dado buenos dividendos y es motivo suficiente para que la empresa destine mayores
+recursos y control al cibercafé con el fin de ofertar lo mejor de sus servicios y cuidar de
+sus activos.
+Si bien EMPRESA_TI intenta consolidar una integración de la prevención en la gestión
+de la empresa, se destacaría una tendencia hacia la documentación de la acción
+preventiva y la individualización de esta, buscando concretar una propuesta en su
+seguridad y políticas encaminadas al correcto uso y protección de los activos que
+dispone. Tal propuesta trata de garantizar que los puestos de trabajo e instalaciones de
+un área específica de la empresa no constituyen ningún riesgo para su personal
+empleado, tomándose en todo caso las medidas oportunas para disminuirlos y evitar sus
+consecuencias. No sólo se trata de mejorar la formación en seguridad de la empresa,
+sino de garantizar, para cada uno de los trabajadores, la información adecuada a los
+riesgos de su puesto de trabajo, así como la adopción de medidas correctivas y
+preventivas en la integridad de sus instalaciones.
+El plan presentado a continuación, es el resultado de la realización de un completo
+análisis sobre el cibercafé de EMPRESA_TI con respecto a la aplicación de barreras
+físicas y procedimientos de control, como medidas de prevención y contramedidas ante
+amenazas a sus recursos o activos e información confidencial.
+La creación del centro de cómputo por parte de EMPRESA_TI conlleva una serie de retos
+a todos los niveles destacando el de ofrecer un buen servicio al cliente y partiendo de
+uno de los mayores compromisos adquiridos: incidentes cero.
+El desarrollo de este trabajo tiene en sí ciertas peculiaridades, al tratarse del cibercafé
+como un nuevo servicio (instaurado a inicios del 2018) de la empresa, no tiene
+documentada ninguna actividad ni datos o estadísticas de incidentes. Para ello se ha
+tomado como situación de partida la situación propia de EMPRESA_TI debido a que el
+cibercafé se encuentra ubicado en las mismas instalaciones físicas de ésta.
+
+3
+
+PERFIL DE USUARIOS
+
+4
+
+EMPRESA_TI cuenta con pocos empleados, además de enfocamos únicamente en el
+área de cibercafé.
+Se divide el perfil de usuarios en dos categorías:
+§
+§
+
+Tipo
+Físico
+
+Físicos: Personas internas y externas involucradas en la empresa.
+Lógicos: Perfiles de usuarios en el hardware y software existente en la empresa.
+Perfil
+Gerente
+
+Administrador
+
+Descripción
+Responsable de la
+estrategia comercial
+y operativa de la
+empresa
+Responsable de las
+operaciones
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Cliente
+
+Persona que recibe
+el servicio
+
+•
+•
+•
+
+Proveedor
+
+Lógico Admin
+
+Usuario
+
+Actividades
+Dirige y gestiona la empresa
+Toma de decisiones para las
+estrategias comerciales
+Toma de decisiones económicas,
+administrativas y sociales
+Planifica, organiza, ejecuta y controla
+Atiende todos los servicios del
+cibercafé
+Autoriza o deniega las solicitudes del
+cliente
+Operador de la fotocopiadora, equipo
+de cómputo, internet e impresora.
+Controla y supervisa el equipo de
+cómputo que se presta al cliente
+Solicita los servicios del cibercafé
+Uso de equipo de cómputo
+Uso de la fotocopiadora y/o
+impresora.
+Entrega de servicio o producto de
+acuerdo con el contrato efectuado
+con la empresa
+
+Empresa o persona
+que provee o
+abastece los
+productos
+necesarios para la
+empresa
+Administrador en el
+equipo de cómputo.
+
+•
+
+•
+
+Permisos de administración de
+cualquier hardware o software
+instalado en el cibercafé para
+gestionar su funcionamiento.
+
+Cuenta de usuario
+limitado en el equipo
+de cómputo.
+
+•
+
+Permisos restringidos para el
+funcionamiento del equipo de
+cómputo y periféricos internos y
+externos como la impresora,
+audífonos, puertos de usb, teclado,
+mouse, etc.
+
+Tabla 1. Perfil de Usuarios
+
+5
+
+ANÁLISIS DE RIESGOS
+
+6
+
+En este apartado se va a realizar un análisis de riesgos exhaustivo de todo el sistema
+informático del cibercafé con el objeto de: descubrir posibles amenazas, vulnerabilidades
+con respecto a las amenazas y el impacto que estas amenazas pudieran tener sobre el
+cibercafé en el caso de llegar a materializarse.
+Se procederá a construir el perfil de las amenazas basado en los activos que posee el
+cibercafé, para ello, se realizarán los siguientes puntos:
+1. Identificación de los activos;
+2. Identificación de las amenazas a los activos;
+3. Conocer las prácticas actuales de seguridad en los activos;
+4. Detectar activos o componentes clave (críticos);
+5. Detectar las vulnerabilidades (ambientales, deliberadas o accidentales), así como
+el grado de riesgo, probabilidad de ocurrencia y grado de consecuencia por cada
+vulnerabilidad sobre los activos críticos;
+6. Clasificación de riesgo de cada activo crítico (muy alto, alto, medio, bajo o muy
+bajo);
+7. Medidas preventivas para contingencias de riesgos en los activos críticos.
+En este apartado se van a tratar los siguientes temas:
+Activo: Algo de valor tangible o intangible al que afecta una amenaza.
+Actor: Quién o qué puede violar los requisitos de seguridad.
+Amenaza: Actor cuya intrusión en el sistema puede provocar una violación de los requisitos de
+seguridad de un activo (pérdida de confidencialidad, pérdida de disponibilidad, destrucción, pérdida de
+integridad,…). El motivo por que se produce una amenaza puede ser accidental (por ejemplo, un
+desastre natural) o intencionado (por ejemplo, una acción humana).
+Impacto: Efecto que producirá una amenaza en el sistema si ésta llega a hacerse realidad.
+Vulnerabilidad: Debilidad del sistema, la cual propicia que una amenaza se pueda hacer realidad.
+Riesgo: Posibilidad de que una amenaza se materialice debido a una vulnerabilidad del sistema sin
+corregir.
+
+1. Identificación de activos
+A continuación, se detalla el inventario que dispone el cibercafé para llevar a cabo sus
+procesos informáticos, en particular del hardware, software, comunicaciones existentes,
+así como los elementos de seguridad física existentes tales como alarmas, cerraduras,
+entre otros.
+§ Hardware: Para realizar el inventario del Hardware instalado de forma adecuada
+se ha usado el programa WinAudit con el que se puede realizar una auditoría
+completa de los equipos informáticos.
+
+7
+
+§
+
+§
+§
+
+Software: Para realizar el inventario del Software instalado de forma adecuada
+se ha usado el programa WinAudit con el que se puede realizar una auditoría
+completa de los equipos informáticos.
+Comunicaciones: Se detallarán los distintos tipos de comunicaciones con los que
+dispone el cibercafé, tanto dentro de los equipos informáticos como teléfonos, etc.
+Seguridad física: Se van a detallar los elementos de seguridad física con los que
+cuenta el cibercafé para hacer frente a posibles accesos no deseados a sus
+equipos o a información confidencial de su negocio.
+
+Tipo
+Hardware
+CPU 1
+
+CPU 2
+
+Laptop
+
+Monitor 1
+Monitor 2
+Cámara web
+Impresora 1
+Impresora 2
+Fotocopiadora
+Router
+Switch
+Regulador de picos
+Software
+
+Descripción
+
+Cantidad
+
+Procesador: Intel(R) Core i5-8600K, CPU 3.60GHz, SixCore.
+Placa base: ASUS microATX Z370-Gaming.
+Memoria RAM: 32 GB.
+Disco Duro: Maxtor ST3200064NS de 2 TB.
+Unidad(es) Blu-Ray: LG 14x WH14NS40.
+Puertos: USB 2.0 (x4), SD, Micro SD.
+Procesador: Intel(R) Celeron G4900, CPU 3.10GHz,
+Dual-Core.
+Placa base: Gigabyte microATX B360M DS3H.
+Memoria RAM: 4 GB DDR3.
+Disco duro: Seagate ST3500414CS de 320 GB.
+Unidades DVD: LG DVD-ROM DRD8160B.
+Unidades CD: HL-DT-ST CD-RW GCE-8400B.
+Puertos: USB 2.0 (x4), SD/MMC+/miniSD, Micro SD,
+Compact Flash
+Procesador: Intel(R) Core i7-8550U, CPU 300- 1150MHz,
+Octa-Core.
+Placa base: Intel Kaby Lake-U iHDCP 2.2 Premium PCH.
+Memoria RAM: 8 GB.
+Disco duro: SSD de 500 GB.
+Puertos: USB 3.0 (x2), HDMI, SD/MMC+.
+Modelo: Dell P2417H LED 24'', Full HD.
+Modelo: LG Flatron L1717S.
+Modelo: HP webcam 9340.
+Modelo: HP Deskjet 5657.
+Modelo: HP Laserjet 1160.
+Modelo: Xerox Altalink C8035.
+Modelo: Linksys WRT3200ACM.
+Modelo: Linksys SE4008 WRT 8-Port Ethernet.
+Modelo: .
+
+1
+
+7
+
+1
+
+1
+7
+7
+1
+1
+1
+1
+1
+2
+
+8
+
+Tipo
+« En CPU 1 »
+
+« En CPU 2 »
+
+« En Laptop »
+
+Descripción
+o Sistema Operativo Windows 10 Professional con
+Service pack 3
+o Acrobat Reader versión 2018.011.20058
+o Adobe Flash Player ActiveX
+o Adobe Photoshop CC 6
+o ATI catayst control center
+o Compresor WinRAR
+o CyberAdmin Free Servidor 5.1.11
+o Eset NOD32 Antivirus
+o Google Chrome versión 70.0.3538.77
+o J2SE Runtime Enviroment 8.0
+o Macromedia Flash Player 8
+o Macromedia Shockwave player
+o Microsoft .NET Framework 4.7
+o Microsoft Office 2010 Standard
+o Mozilla Firefox versión 62.0.2
+o Nero 8 Ultra Edition
+o PDF Creator
+o Power DVD
+o Software de conexiones de red Intel(R) PRO v9.2.4.9
+o Quick Time
+o VLC 2.2.8
+o XAMP v3.2.2
+o Sistema Operativo Windows 7 Home Edition con
+Service pack 3
+o AD-Aware SE Professional
+o Acrobat Reader versión 2018.011.20058
+o Adobe Flash Player ActiveX
+o Compresor WinRAR
+o CyberAdmin Free Cliente 5.1.11
+o Google Chrome versión 70.0.3538.77
+o HP Laserjet 116/1320 series
+o HP print scren utility
+o J2SE Runtime Enviroment 8.0
+o Macromedia Flash Player 8
+o McAfee security center
+o McAfee VirusScan Professional
+o Microsoft .NET Framework 4.7
+o Microsoft Edge versión 41.16299.402.0
+o Microsoft Office 2010 Standard
+o Mozilla Firefox versión 62.0.2
+o Nero Burning ROM 7
+o Quick Time
+o VLC 2.2.8
+o Sistema Operativo Windows 10 Professional Service
+pack 3
+o AD-Aware SE Personal
+o Adobe Photoshop CS6
+o Acrobat Reader versión 2018.011.20058
+o Autocad 2017
+o Compresor WinRAR
+o CyberAdmin Free Cliente 5.1.11
+
+Cantidad
+1
+
+7
+
+9
+
+Tipo
+
+Comunicaciones
+« En CPU 1 »
+
+« En CPU 2 »
+« En Laptop »
+Teléfono fijo
+Teléfono móvil
+Fax
+« En Router »
+Seguridad Física
+Trituradora papel
+Alarma
+Cámara de
+vigilancia
+Enrejado
+Cortina metálica
+Cerraduras
+Ventiladores
+Extintor
+
+Descripción
+o Divx player
+o Eset NOD32 Antivirus
+o Google Chrome versión 70.0.3538.77
+o Google Earth
+o Google Talk
+o iTunes
+o J2SE Runtime Enviroment 8.0
+o Macromedia Studio MX
+o Microsoft Office 2010 Standard
+o Mozilla Firefox versión 62.0.2
+o Panel de control ATI
+o PDF Creator
+o Quick time
+o Skype
+
+Cantidad
+
+Tarjeta(s) de red:
+o Intel PRO/1000 MT Network Connection
+o Linksys Wireless-B usb Network Adapter v2.8
+Tarjeta(s) de red:
+o NIC Fast Ethernet PCI Familia RTL8139 de Realtek
+Tarjeta(s) de red:
+o Intel 8265 Tri-Band WiFi (Oak Peak)
+Modelo: Siemens Euroset 2015.
+Modelo: Samsung Galaxy S7
+Modelo: Brother FAX-T74.
+Conexión a Internet:
+o Banda ancha ADSL de 20 MB contratada con Telmex
+
+2
+
+Modelo: Royal HG12X.
+Servicio: ADT Centralización.
+Servicio: ADT Centralización.
+
+1
+2
+1
+
+Puerta de reja perimétrica en el interior del cibercafé.
+Cortina metálica del local.
+Cerradura de llave o candado al interior y exterior del
+local.
+Al interior del cibercafé.
+Al interior del cibercafé.
+
+1
+1
+4
+
+1
+1
+1
+1
+1
+1
+
+3
+1
+
+Tabla 2. Activos en el cibercafé.
+
+2. Amenazas sobre los activos
+El negocio del cibercafé pudiera verse afectado por causas de distinto origen, en el
+presente estudio se considerarán las amenazas que, acorde a la realidad del local,
+10
+
+resultan inherentes al cibercafé (como espacio físico) o a su operatividad. A continuación,
+se describen los aspectos a considerar:
+§
+
+Desastres naturales: Acciones climatológicas y, por lo tanto, incontrolables que
+pueden afectar al negocio. Acorde a la geografía en que se ubica el cibercafé, se
+considerarán tormentas y rayos, terremotos e inundaciones.
+Tormenta: Es una perturbación atmosférica violenta acompañada de aparato eléctrico y
+viento fuerte, lluvia, nieve o granizo.
+Rayo: Es una chispa eléctrica de gran intensidad producida por descarga entre dos nubes
+o entre una nube y la tierra.
+Terremoto: Es una sacudida del terreno ocasionada por el choque de las placas tectónicas
+localizadas en la litosfera terrestre.
+Inundación: Una inundación puede ser producida por un exceso de lluvias,
+desbordamiento de ríos, rotura de presas, rotura de cañerías, exceso de humedad, etc. Se
+entiende por inundaciones de agua cubrir los terrenos, poblaciones o edificios.
+
+§
+
+Estructurales: Amenazas debidas a fallos en los elementos del edificio tales
+como cableado eléctrico, conductos del aire acondicionado, elementos de
+comunicación, entre otros. Pueden ser controlados y evitados. Se considerarán
+incendios, cortes en los sistemas eléctricos, de agua o de comunicaciones
+además de fallas en la refrigeración del inmueble.
+Incendio: Fuego no controlado que puede ser extremadamente peligroso para los seres
+vivos y las estructuras, produciendo además gases tóxicos. Las causas de un incendio
+pueden ser diversas:
+- Existencia de una fuente de ignición cercana a un material inflamable;
+- Problemas en cuadros eléctricos;
+- Cortocircuitos;
+- Etc.
+Corte eléctrico: Corte temporal del suministro de energía eléctrica por parte de la
+compañía suministradora. El corte puede ser de corta duración o puede llegar a ser de
+varios días.
+Corte de agua: Corte temporal del suministro de agua por parte de la compañía
+suministradora. El corte puede ser de corta duración o incluso de varios días.
+Corte en las comunicaciones: Corte temporal en los sistemas de comunicación de la
+empresa debido a un problema externo (puede deberse a un fallo de la compañía telefónica
+suministradora). El corte puede ser de corta duración (un día) o más extenso (varios días).
+Refrigeración: Fallos en el normal funcionamiento de la maquinaria de climatización que
+existe dentro de la empresa. Los fallos pueden ser debido a cortes en el suministro eléctrico,
+fugas en los aparatos de climatización, etc.
+
+11
+
+§
+
+Hardware: Amenazas debidas a problemas en el equipamiento físico del
+negocio. Pueden ser controladas. Se considerarán fallos en servidores, equipos
+de cómputo fijos y equipos portátiles.
+Fallo de servidores: Fallo temporal en alguno o todos los servidores de la empresa. El
+fallo puede deberse a un corte de la corriente eléctrica en los servidores, un fallo humano
+en la gestión de los mismos, errores en el hardware o en el software, etc.
+Fallo en equipos de cómputo fijos: Fallo temporal en alguna o todas las estaciones de
+trabajo fijas que dispone la empresa. El fallo puede deberse a un corte de la corriente
+eléctrica en los equipos de cómputo, un fallo humano en la gestión de estos, errores en el
+hardware o en el software, etc.
+Fallo en equipos portátiles: Fallo temporal en alguna o todas las estaciones de trabajo
+móviles que dispone la empresa. El fallo puede deberse a un corte de la corriente eléctrica
+en los equipos portátiles, un fallo humano en la gestión de estos, errores en el hardware o
+en el software, etc.
+
+§
+
+Software: Fallos debidos a amenazas que pueden afectar al Software que
+emplea el cibercafé para desarrollar su actividad de negocio. Se considerarán
+errores en los sistemas operativos, bases de datos, aplicaciones y elementos de
+seguridad.
+Error en sistema operativo: Errores internos de los sistemas operativos instalados en los
+equipos de los que dispone la empresa. El fallo se debe a errores de programación o a la
+no instalación de las actualizaciones de seguridad que distribuye el proveedor o
+desarrollador del sistema cada cierto tiempo.
+Error en bases de datos: Errores internos en las Bases de Datos instalados en los equipos
+de los que dispone la empresa. El fallo puede deberse a errores de programación de los
+programas que trabajan con las bases de datos, fallos puntuales en alguna de las tablas o
+fallos en la creación de las bases de datos.
+Error en aplicaciones: Errores internos en las diferentes aplicaciones instaladas en los
+equipos de los que dispone la empresa. El fallo se debe a errores de programación o a la
+no instalación de las actualizaciones que distribuye el proveedor o desarrollador de la
+aplicación cada cierto tiempo.
+Error en elementos de seguridad: Errores en los elementos de seguridad que dispone la
+empresa, puede tratarse de errores en el software tales como fallo de antivirus o firewall, o
+errores en los elementos físicos tales como fallo de las alarmas, etc.
+
+§
+
+Red LAN y WAN: Fallos debidos a amenazas que pueden afectar a las
+comunicaciones tanto internas como externas del negocio. Se considerará la red
+interna, los sistemas de seguridad de las comunicaciones y las redes públicas
+ajenas (Internet).
+Red interna: Fallos en las comunicaciones de la red interna debidos a caídas temporales
+de ésta. Las caídas en la red interna pueden deberse a fallos en el Router que da servicio
+a la red, problemas con el cableado o el emisor inalámbrico.
+
+12
+
+Sistema de seguridad en la comunicación: Errores en los sistemas que aseguran que
+las comunicaciones de la empresa se van a poder realizar sin problemas y además no
+existen terceras personas ajenas a la organización que intercepten esas comunicaciones.
+Red pública ajena: Fallos de la empresa suministradora de servicios de red y que
+provoquen una pérdida en los servicios de conexión de la organización hacia el exterior.
+
+§
+
+Copias de seguridad: Problemas o fallos en los soportes de Backup que tengan
+como consecuencia el daño o la pérdida de la información que ha sido duplicada
+en soportes de copias de seguridad.
+Fallos en soportes de copias de seguridad: Fallos en los soportes donde han sido
+almacenadas copias de seguridad, debido a los cuales se produce un daño o una pérdida
+de información útil para el negocio de la empresa. Los fallos en los soportes de Backup
+pueden ser debidos a fallos de fabricación, a un mal almacenamiento o simplemente un
+fallo del soporte.
+
+§
+
+Información: Qué problemas pueden afectar a la información almacenada dentro
+del cibercafé, la cual es valiosa para llevar a cabo los procesos de negocio. Se
+considerarán archivos, procedimientos de seguridad de la información de los
+usuarios y planes de contingencia para la información de los usuarios.
+Archivo: Fallos o pérdidas de los archivos donde se almacena la información valiosa de la
+empresa. Los problemas con los archivos pueden ser debidos a una mala gestión de estos,
+a fallos en los equipos donde están almacenados, etc.
+Procedimientos de seguridad de la información: Fallos en los procedimientos de
+seguridad para salvaguardar la información y evitar daños o pérdidas. Los fallos en los
+procedimientos de seguridad generalmente son debidos a una aplicación incorrecta de los
+mismos.
+Planes de contingencia: Fallos en los planes de contingencia ideados para salvaguardar
+la información y evitar daños o pérdidas. Los fallos en los planes de contingencia
+generalmente son debidos a una aplicación incorrecta de los mismos.
+
+§
+
+Personal: La mayoría de los ataques informáticos a una empresa provienen
+desde dentro de la misma perpetrados por sus propios empleados. Es importante
+contar con estrategias de control de los empleados, así como de las acciones que
+realizan en el sistema. Se considerarán en este rubro los errores y ataques de
+empleados (personas internas) o personas externas.
+Errores y ataques de personas internas: El personal que trabaja en la empresa puede
+provocar fallos en los sistemas de la empresa o pérdidas de información debido a falta de
+formación, falta de conocimiento, mala intencionalidad.
+Errores y ataques de personas externas: Personas ajenas a la empresa pueden querer
+dañarla por algún motivo por lo que es necesario preparar a la organización para evitar
+ataques externos a sus sistemas. Los ataques externos pueden provenir de exempleados
+descontentos, personas que desean obtener información confidencial para su propio
+beneficio, etc.
+
+13
+
+§
+
+Riesgos contra el patrimonio: Posibilidad de que personas propias o ajenas se
+apoderen de cosas muebles que no le pertenecen con el propósito de hacerlas
+suyas y enriquecerse, empleando fuerza en las cosas para poder acceder al lugar
+donde los objetos se encuentran, o empleando violencia o intimidación sobre las
+personas. Se pueden considerar en este segmento el robo o la pérdida no
+intencionada de activos.
+Robo: Cualquier empresa puede ser objetivo de un robo debido a que en sus dependencias
+suelen tener material valioso e incluso dinero.
+Pérdida no intencionada de activos: A pesar de que en todas las empresas intentan
+proteger al máximo sus activos, éstos pueden estar en peligro debido a fallos no
+intencionados del personal. Estas pérdidas pueden acarrear a la empresa muchos gastos
+en reponer los activos perdidos e incluso pérdidas irreemplazables.
+
+§
+
+Legislación: El aumento de delitos informáticos realizados desde estos sitios de
+acceso público, donde se dificulta el control del usuario y podría permitir, por
+ejemplo, el libre acceso a páginas pornográficas para menores de edad por
+carecer de filtros adecuados aunado a la creciente moda de las cabinas privadas,
+entre otros, podría involucrar a estos negocios en actos establecidos como
+ilegales.
+Legislación: La información que manejan las empresas está sujeta al cumplimiento de las
+actuales leyes nacionales.
+
+§
+
+Otros riesgos: Existen otro tipo de riesgos que son ajenos a la empresa, pero
+que aun así pueden afectar a su correcto funcionamiento. A considerarse están
+el terrorismo (vandalismo), reputación (imagen del negocio) y la insolvencia de
+servicios externos.
+Terrorismo: Los actos terroristas son actos de violencia para infundir terror. En el mundo
+actual el terrorismo se está convirtiendo en una de las grandes amenazas para todo el
+conjunto de la sociedad.
+Reputación (imagen del negocio): La imagen es uno de los activos más importantes que
+tiene una empresa, si por alguna razón la imagen de una empresa resulta dañada, puede
+conllevar pérdidas millonarias para ella. Una pérdida de imagen puede deberse a diversas
+causas como pueden ser pérdidas graves de información por parte de la empresa,
+problemas en negocios, publicidad inadecuada, etc.
+Insolvencia de servicios externos: Cualquier empresa, por pequeña que sea, depende
+en parte de terceras empresas que le suministran sus productos o servicios. Por ello si una
+empresa suministradora sufre algún contratiempo, ese contratiempo también afectará en
+mayor o menor medida a la empresa suministrada.
+
+14
+
+Las amenazas se clasificarán en función de la importancia que pueden tener a la hora
+de afectar al negocio del cibercafé en caso de materializarse. Se van a clasificar las
+amenazas en tres tipos de niveles:
+§
+§
+
+§
+
+Importancia Alta (A): Tendrían una repercusión muy alta dentro del negocio en
+el caso de producirse; son las amenazas que se deberán evitarse a toda costa.
+Importancia Media (M): Adquirirían una repercusión importante, pero sin ser muy
+críticas para el negocio en el caso de producirse; aunque no resultan tan críticas
+como las clasificadas en Alta es conveniente tratar de evitar que ocurran.
+Importancia Baja (B): No tienen una repercusión muy importante dentro de la
+operatividad del negocio. Es recomendable que no se produzcan, pero tampoco
+sería necesario establecer medidas concretas para evitar este tipo de amenazas.
+
+A continuación, se muestra una tabla con el análisis de las amenazas genéricas
+inherentes al negocio del cibercafé:
+Causa
+Tormentas
+rayos
+
+Impacto
+y Las tormentas con alto
+contenido eléctrico pueden
+provocar picos de tensión
+y,
+por
+consecuente,
+pérdidas de datos o daños
+irreparables
+en
+el
+equipamiento eléctrico.
+En la zona geográfica
+donde se ubica el cibercafé
+son comunes las tormentas
+en verano y otoño, pero las
+tormentas eléctricas se
+producen en contadas
+ocasiones.
+
+Nivel
+Tipo A: Se daría en el caso de que
+impactara un rayo directamente en el local
+donde se encuentra el cibercafé. Esto podría
+provocar un daño estructural, daños severos
+en el hardware y ocasionalmente incendios.
+La gravedad de la amenaza sería muy alta,
+pero la probabilidad de que llegue a
+materializarse es baja.
+Tipo M: Se daría en el caso en que la
+tormenta afectara directamente al suministro
+de energía eléctrica y, entonces, afectar al
+funcionamiento normal del cibercafé, así
+como al funcionamiento de los equipos
+informáticos de éste; si la tormenta afectara
+directamente al suministrador de servicio
+eléctrico del cibercafé y los cortes del
+servicio se prolongan demasiado en el
+tiempo, la gravedad de la amenaza puede
+considerarse como media/alta, pero la
+probabilidad de que se produzca es baja
+pues las empresas de servicios suelen estar
+muy bien protegidas contra ese tipo de
+amenazas.
+Tipo B: Se daría en el caso de cortes de
+electricidad de corta duración por problemas
+de la instalación eléctrica en la edificación
+debido a la tormenta o por problemas de las
+líneas de la empresa suministradora. La
+gravedad de esta amenaza puede
+considerarse como media/baja y la
+probabilidad de que ocurra es media pues es
+15
+
+Causa
+
+Impacto
+
+Terremotos
+
+Un terremoto de alta
+magnitud en la escala de
+Richter puede producir
+derrumbamientos
+de
+edificios, así como cortes
+de electricidad o rotura de
+material debido a caídas o
+golpes.
+La zona donde se localiza
+el
+cibercafé
+es
+sísmicamente
+estable
+registrándose movimientos
+sísmicos puntuales de poca
+intensidad.
+
+Inundaciones
+
+Una inundación en la zona
+donde se encuentren los
+equipos informáticos puede
+producir daños materiales
+en los equipos.
+La zona donde se localiza
+el cibercafé no es propicia a
+que se produzcan lluvias
+torrenciales y tampoco
+existe ninguna presa cerca.
+Sí
+podrían
+producirse
+inundaciones
+en
+el
+cibercafé debido a rotura
+de tuberías o humedades
+excesivas que pueden
+dañar
+los
+equipos
+informáticos y producir
+pérdida
+de
+datos
+e
+información crítica para el
+negocio.
+
+Nivel
+frecuente que puedan producirse cortes
+intermitentes de luz durante una tormenta.
+Tipo A: Se daría en el caso de un sismo de
+magnitud superior a 6 en la escala de grados
+Richter, pudiendo afectar a la estructura del
+local provocando incluso su derrumbe en
+casos extremos o incendios. Puede
+ocasionar graves daños en los equipos
+informáticos debidos a roturas y fuertes
+golpes. La gravedad de la amenaza sería
+muy alta, aunque la probabilidad de que se
+llegue a materializar es baja.
+Tipo M: Se daría en el caso de un sismo de
+intensidad igual a 6 o inferior. Los daños
+serían inferiores a los producidos en el tipo
+A. La gravedad de la amenaza puede
+considerarse como media/alta, pero la
+probabilidad de que se produzca es baja.
+Tipo B: Sismo inferior que puede ocasionar
+desalojos en los edificios y que produciría
+una pérdida mínima de tiempo de trabajo. La
+gravedad de esta amenaza puede
+considerarse como baja/muy baja y la
+probabilidad de que ocurra es baja pues es
+en la zona no se dan terremotos lo
+suficientemente intensos como para
+propiciar un desalojo de edificios.
+Tipo A: Grave inundación que anegaría todo
+el local y que afectaría a los equipos de
+forma que se podrían perder datos críticos y
+se suspendería la actividad del negocio por
+un tiempo indefinido. La gravedad de la
+amenaza sería muy alta, aunque la
+probabilidad de que se llegue a materializar
+es media/baja.
+Tipo M: Inundación de una zona donde se
+encuentre equipamiento informático con
+datos críticos para el funcionamiento de la
+empresa y que produciría una pérdida
+parcial de información o de horas de trabajo.
+La gravedad de la amenaza puede
+considerarse como media/alta, pero la
+probabilidad de que se produzca es
+media/baja.
+Tipo B: Pequeñas inundaciones debidas a
+roturas de tuberías o filtraciones de agua
+debido a humedades en las paredes y que
+pueden dañar algún equipo. La gravedad de
+esta amenaza puede considerarse como
+media/alta y la probabilidad de que ocurra es
+16
+
+Causa
+
+Incendios
+
+Impacto
+
+Un incendio puede dañar
+gravemente
+el
+equipamiento informático
+del cibercafé, pudiendo
+dejarlo
+completamente
+inservible, así como la
+documentación existente
+en formato papel.
+Un incendio que afecte al
+cibercafé puede deberse a
+causas
+naturales,
+accidentales
+o
+ser
+premeditado para infligir
+daño.
+
+Nivel
+alta pues es relativamente fácil que ocurra
+algún problema en una tubería.
+Tipo A: Gran incendio que afecte a todo el
+local donde está ubicado el cibercafé. Un
+incendio de estas características podría
+dejar inutilizadas completamente todas las
+instalaciones, así como destruir todo el
+equipamiento informático y la información
+vital de éste que se encuentre en cualquier
+tipo de soporte, lo que podría producir la
+paralización total de la actividad del negocio
+por un periodo de tiempo muy largo si no se
+dispone de una copia de Backup
+convenientemente actualizada y que no se
+localizara en las instalaciones que han sido
+afectadas por el fuego o al interior de un
+espacio repelente al mismo. La gravedad de
+la amenaza sería muy alta, aunque la
+probabilidad de que se llegue a materializar
+es media/alta debido a que, si se produce un
+incendio de estas características por un
+descuido o de una forma intencionada,
+puede resultar muy difícil para los equipos
+de extinción conseguir controlar un fuego tan
+grande y evitar que no se produzcan daños
+graves en la edificación.
+Tipo M: Incendio en una parte localizada del
+local que, aunque no afecte directamente al
+cibercafé y a su equipamiento, puede
+dificultar las labores normales de trabajo
+dentro del negocio durante un periodo de
+tiempo medio (entre 3 y 6 meses). La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como media/alta y la
+probabilidad de que se produzca también,
+aunque en este caso los equipos de
+extinción tendrán mucho más fácil la labor
+de extinguir rápidamente el fuego.
+Tipo B: Incendio en una sala de equipos de
+cómputo y que afecte directamente a
+equipos concretos. En el caso de disponer
+de copias de seguridad de esos equipos la
+puesta en marcha de nuevo del trabajo que
+se estuviera realizando en ellos puede ser
+inmediata. La gravedad de esta amenaza
+puede considerarse como media/alta
+porque, en el caso de que no se disponga de
+una copia de seguridad de los equipos
+afectados, se puede perder información
+valiosa. La probabilidad de que ocurra es
+alta, pues es relativamente fácil que se
+produzca un cortocircuito que provoque un
+17
+
+Causa
+
+Impacto
+
+Corte eléctrico
+
+Un corte súbito en la
+energía de alimentación de
+los equipos del cibercafé
+puede llegar a provocar
+daños
+irreparables
+en
+algunos de ellos.
+Las causas para que la
+compañía eléctrica corte el
+suministro eléctrico pueden
+ser naturales o provocadas.
+
+Corte de agua
+
+En el caso del cibercafé,
+ninguno de los equipos
+tiene instalado algún tipo
+de refrigeración mediante
+conductos de agua, por lo
+que un corte en el
+suministro de agua no
+afectaría
+en
+ninguna
+medida al equipamiento
+informático del negocio.
+Corte en las
+Las causas para que se
+comunicaciones produzca un fallo en las
+comunicaciones
+por
+problemas de la compañía
+telefónica pueden deberse
+a factores naturales o a
+factores humanos.
+Un fallo en el sistema de
+comunicaciones
+puede
+producir un grave trastorno
+al cibercafé, pues depende
+en gran medida de éstas
+para
+desarrollar
+su
+negocio.
+
+Nivel
+fuego, aunque como es centralizado sería
+de fácil y rápida extinción.
+Tipo A: Corte eléctrico que se prolongue
+varios días. Afectará gravemente al
+desarrollo normal de las actividades del
+negocio durante un largo periodo de tiempo.
+La gravedad de la amenaza sería alta,
+aunque la probabilidad de que se llegue a
+materializar es baja.
+Tipo M: Corte eléctrico de menor duración
+que el de tipo A y que afectará al desarrollo
+de las actividades del negocio por un tiempo
+no superior a un mes. La gravedad de la
+amenaza puede considerarse como media,
+y la probabilidad de que se produzca es
+baja.
+Tipo B: Corte eléctrico de poca duración y
+que afectará al desarrollo de las actividades
+del negocio por 24 horas o menos. La
+gravedad de esta amenaza puede
+considerarse como baja y la probabilidad de
+que ocurra es media pues, es relativamente
+fácil que se produzca un pequeño corte en
+el suministro eléctrico debido a, por ejemplo,
+una sobrecarga en la red del suministro.
+< No aplica >
+
+Tipo A: Corte en las comunicaciones
+durante un periodo largo de tiempo. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como muy alta, aunque la
+probabilidad de que se llegue a materializar
+es muy baja debido a que, en lo que lleva
+constituida la empresa (el 2 de diciembre de
+2011), no se han producido este tipo de
+cortes, por lo que se supone que no llegarán
+a producirse.
+Tipo M: Corte en las comunicaciones
+durante varios días lo que puede retrasar y
+complicar ligeramente la operatividad del
+negocio. La gravedad de la amenaza puede
+considerarse como media, y la probabilidad
+de que se produzca es baja.
+18
+
+Causa
+
+Refrigeración
+
+Fallo en
+servidores
+
+Fallo en quipos
+de cómputo
+fijos
+
+Fallo en
+equipos
+portátiles
+
+Impacto
+Debido a la naturaleza del
+negocio, puede no ser tan
+crítico un fallo en las
+comunicaciones de voz
+como sí lo sería en las
+comunicaciones de los
+equipos informáticos.
+El
+equipamiento
+informático del cibercafé no
+está funcionando a ritmo
+completo las 24 horas del
+día por lo que no necesita
+unas
+condiciones
+especiales en lo que se
+refiere a la temperatura
+ambiente.
+El cibercafé no dispone de
+servidores puesto que
+cuenta únicamente con
+estaciones de trabajo por lo
+que esta amenaza no
+requiere ser tenida en
+cuenta.
+Fallos y pérdidas de
+servicio en los equipos de
+trabajo pueden afectar a la
+operativa
+normal
+del
+negocio, podrían perderse
+datos vitales para el
+correcto funcionamiento del
+negocio.
+Un fallo en los equipos de
+trabajo puede ocasionar
+pérdidas de horas de
+trabajo o algo mucho más
+grave,
+pérdidas
+de
+información crítica para el
+correcto funcionamiento del
+cibercafé.
+
+Fallos y pérdidas de
+servicio en los equipos de
+trabajo portátiles pueden
+afectar al trabajo normal del
+cibercafé
+pudiéndose
+perder datos vitales para el
+
+Nivel
+Tipo B: Corte en las comunicaciones
+durante un tiempo inferior a 24 horas o micro
+cortes durante un periodo corto de tiempo.
+La gravedad de esta amenaza puede
+considerarse como baja y la probabilidad de
+que ocurra es también baja.
+< No aplica >
+
+< No aplica >
+
+Tipo A: Fallo en todos los equipos de trabajo
+del cibercafé durante un periodo de tiempo
+superior a una semana o pérdida de
+información almacenada en esos equipos.
+La gravedad de la amenaza puede
+considerarse como muy alta porque
+perjudicará gravemente el negocio del
+cibercafé, aunque la probabilidad de que se
+produzca es baja.
+Tipo M: Fallo en alguno de los equipos
+durante un tiempo inferior a una semana, sin
+pérdida de ningún tipo de información crítica
+para el negocio. La gravedad de la amenaza
+puede considerarse como media, y la
+probabilidad de que se produzca es baja.
+Tipo B: Fallo en algún equipo durante un
+tiempo inferior a 24 horas o pequeños fallos
+durante ese tiempo sin darse pérdida de
+información. La gravedad de esta amenaza
+puede considerarse como baja y la
+probabilidad de que ocurra es media/baja.
+Tipo A: Fallo en todos los equipos de trabajo
+portátiles del cibercafé durante un periodo
+de tiempo superior a una semana o pérdida
+de
+información
+y/o
+configuración
+almacenada en esos equipos. La gravedad
+de la amenaza puede considerarse como
+muy alta porque perjudicará gravemente a la
+19
+
+Causa
+
+Impacto
+correcto funcionamiento del
+negocio.
+Un fallo en los equipos de
+trabajo portátiles puede
+ocasionar pérdidas de
+horas de trabajo o algo
+mucho más grave como la
+negación
+del
+servicio,
+pérdidas de información
+crítica o configuraciones
+para
+el
+correcto
+funcionamiento
+del
+cibercafé.
+
+Error en
+sistemas
+operativos
+
+Un fallo en los sistemas
+operativos instalados en los
+equipos
+del
+cibercafé
+puede provocar fallos en
+los procesos informáticos,
+retrasos en los procesos
+que
+dependan
+del
+equipamiento informático;
+lo que constituiría un grave
+agujero en la seguridad
+informática del negocio.
+
+Nivel
+operativa
+del
+negocio,
+aunque
+la
+probabilidad de que se produzca es baja.
+Tipo M: Fallo en alguno de los equipos
+portátiles durante un tiempo inferior a una
+semana, pero no se genera pérdida de
+ningún tipo de información y/o configuración
+crítica para el cibercafé. La gravedad de la
+amenaza puede considerarse como media,
+y la probabilidad de que se produzca es
+baja.
+Tipo B: Fallo en algún equipo portátil
+durante un tiempo inferior a 24 horas o
+pequeños fallos durante ese tiempo sin
+darse
+pérdida
+de
+información
+y/o
+configuración. La gravedad de esta
+amenaza puede considerarse como baja y la
+probabilidad de que ocurra es media/baja.
+Tipo A: Fallo en los sistemas operativos de
+todos los equipos informáticos del cibercafé
+durante un tiempo superior a un día. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como muy alta porque
+perjudicará gravemente a la continuidad del
+negocio del cibercafé debido, sobre todo, a
+que
+pueden
+producirse
+importantes
+agujeros de seguridad, aunque la
+probabilidad de que se produzca es baja,
+pues los sistemas operativos están
+correctamente actualizados.
+Tipo M: Fallo en el sistema operativo de
+algún equipo informático durante un tiempo
+máximo de un día. La gravedad de la
+amenaza puede considerarse como
+media/alta, pues si falla el equipo en el que
+se encuentra toda la información relevante o
+de administración del cibercafé sería un
+daño grave, pero si falla otro equipo con
+información menos crítica no es tan
+importante. La probabilidad de que se
+produzca es baja pues los sistemas
+operativos
+están
+correctamente
+actualizados.
+Tipo B: Fallo en el sistema operativo de un
+equipo que no contenga información muy
+crítica durante un periodo inferior a un día.
+La gravedad de esta amenaza puede
+considerarse como baja puesto que si el
+equipo no contiene información muy crítica y
+el periodo del fallo es inferior a un día no
+repercutirá excesivamente en el correcto
+funcionamiento de la operativa del negocio.
+20
+
+Causa
+
+Error en bases
+de datos
+
+Error en
+aplicaciones
+
+Impacto
+
+Nivel
+La probabilidad de que ocurra es baja, pues
+los sistemas operativos están correctamente
+actualizados.
+El cibercafé no dispone de < No aplica >
+bases de datos; toda su
+información se guarda en
+archivos de texto plano u
+ofimática almacenados en
+un
+directorio
+de
+los
+equipos, en particular, la
+máquina dedicada a la
+administración
+del
+cibercafé. Por lo tanto, esta
+amenaza no es aplicable.
+Un fallo en las aplicaciones Tipo A: Fallo en aplicaciones consideradas
+que se utilizan en el críticas dentro la operativa del cibercafé
+cibercafé puede provocar durante un tiempo superior a un día. Por
+problemas en el correcto aplicaciones críticas pueden considerarse,
+funcionamiento de los por ejemplo, aquellas desarrolladas a
+procesos del negocio.
+medida o genéricas para el tipo de negocio
+Además de aplicaciones que describe la operativa de un cibercafé y
+comerciales de uso común de las que es más complicado recibir
+para sus clientes, el soporte, pero son muy importantes para el
+cibercafé también utiliza correcto desarrollo de los procesos de
+negocio. La gravedad de la amenaza puede
+aplicaciones
+considerarse como muy alta porque
+específicamente
+desarrolladas para el giro perjudicará gravemente el negocio debido a
+de este tipo de negocios, que muchas aplicaciones están instaladas
+como
+por
+ejemplo únicamente en un equipo y si fallan se
+programas de monitoreo. Al perderá su utilidad durante el tiempo de fallo.
+no
+ser
+aplicaciones La probabilidad de que se produzca es
+pues
+las
+aplicaciones
+comerciales
+con
+gran media/baja
+están
+correctamente
+respaldo
+pueden comerciales
+pero
+las
+aplicaciones
+producirse más fallos y, actualizadas,
+elaboradas
+a
+medida
+presentan
+un
+generar incluso problemas
+mantenimiento
+más
+complicado.
+de seguridad.
+Tipo M: Fallo en aplicaciones consideradas
+críticas dentro la operativa del cibercafé
+durante un tiempo máximo de un día. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como alta pues, aunque el
+tiempo de fallo de la aplicación no sea
+extenso, puede perjudicar al correcto
+funcionamiento del negocio. La probabilidad
+de que se produzca es media/baja, como se
+ha comentado en el tipo A, las aplicaciones
+comerciales
+están
+correctamente
+actualizadas,
+pero
+las
+aplicaciones
+elaboradas
+a
+medida
+tienen
+un
+mantenimiento más complicado.
+
+21
+
+Causa
+
+Error en
+elementos de
+seguridad
+
+Impacto
+
+Los fallos en los elementos
+de
+seguridad
+pueden
+deberse a fallos en las
+actualizaciones de los
+antivirus o, por ejemplo,
+cortes
+de
+suministro
+eléctrico que afecten al
+correcto funcionamiento de
+la alarma. También pueden
+considerarse el desgaste
+natural de elementos como
+cerraduras.
+Un fallo en las medidas de
+seguridad dentro del local
+puede provocar graves
+problemas en el correcto
+funcionamiento de los
+procesos del negocio, así
+como
+pérdidas
+de
+información importante.
+
+Nivel
+Tipo B: Fallo en aplicaciones no críticas, es
+decir, que no afecten al desarrollo normal de
+los procesos del negocio durante un periodo
+inferior a un día. La gravedad de esta
+amenaza puede considerarse como baja
+puesto que, si el fallo se da en aplicaciones
+no críticas o que están instaladas en varios
+equipos, no se alterarán los procesos del
+cibercafé. La probabilidad de que ocurra es
+baja pues las aplicaciones no críticas son las
+comerciales
+y
+están
+correctamente
+actualizadas e instaladas en más de un
+equipo.
+Tipo A: Fallo en las medidas de seguridad
+en hardware o software del que dispone el
+cibercafé durante un tiempo superior a un
+día. La gravedad de la amenaza puede
+considerarse como muy alta, porque un fallo
+grave en las medidas de seguridad
+perjudicará gravemente al negocio. También
+pueden producirse robos que afecten
+económicamente
+al
+cibercafé.
+La
+probabilidad de que se produzca es
+media/baja, pues las medidas de seguridad
+física están en correcto funcionamiento,
+pero las medidas en el uso del software no
+poseen un control adecuado sobre su
+actividad.
+Tipo M: Fallo en las medidas de seguridad
+en hardware o software del cibercafé
+durante un tiempo máximo de un día. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como alta pues, aunque el
+tiempo de fallo de la seguridad no sea
+extenso, compromete seriamente al
+negocio. La probabilidad de que se produzca
+es media/baja ya que, como se ha
+comentado en el tipo A, las medidas de
+seguridad física están en correcto
+funcionamiento, pero las medidas en el uso
+del software no poseen un control adecuado
+sobre su actividad.
+Tipo B: Fallos de seguridad leves durante
+un periodo inferior a un día. Por fallos leves
+se puede entender que el antivirus deje de
+funcionar durante una hora, un corte
+eléctrico breve que afecte a la alarma, etc.
+La gravedad de esta amenaza puede
+considerarse como media/baja puesto que,
+aunque el fallo de elementos de seguridad
+es grave, si estos sistemas están sin
+22
+
+Causa
+
+Impacto
+
+Red interna
+
+Los fallos en el servicio de
+comunicaciones
+del
+negocio son debidos a
+fallos del propio cibercafé y,
+por tanto, de completa
+responsabilidad
+a
+la
+empresa.
+Un fallo en el servicio de
+comunicaciones
+del
+cibercafé puede provocar
+algún retraso en los
+procesos críticos debido a
+la naturaleza de este, en
+todo momento este tipo de
+fallos
+afectarán
+gravemente a la operativa
+del negocio.
+
+Sistemas de
+seguridad de
+las
+comunicaciones
+
+Los fallos en los sistemas
+de
+seguridad
+pueden
+deberse a fallos en las
+actualizaciones de los
+antivirus, sobre todo en los
+antispyware y firewalls que
+no detecten intrusos en la
+red o fallos en el acceso al
+Router de comunicaciones
+y que un intruso pueda
+modificar la configuración
+de este e impedir que se
+realicen
+las
+comunicaciones
+
+Nivel
+funcionamiento un tiempo mínimo el impacto
+en el negocio no será grave. La probabilidad
+de que ocurra es media/alta ya que
+pequeños errores, como el fallo temporal de
+un antivirus suelen ser frecuente.
+Tipo A: Fallo en los sistemas de
+comunicación informática durante un tiempo
+superior a 24 horas. La gravedad de la
+amenaza puede considerarse como muy
+alta porque un fallo en las comunicaciones
+informáticas afectará especialmente al
+cibercafé salvo que el fallo se produzca en
+épocas del año determinadas en las que, por
+ejemplo, exista un periodo de actividad o
+baja demanda en los equipos de cómputo.
+La probabilidad de que se produzca es muy
+baja.
+Tipo M: Fallo en los sistemas de
+comunicación informática durante un tiempo
+no superior a 24 horas. La gravedad de la
+amenaza puede considerarse como alta por
+los mismos motivos que ocurren en el tipo A.
+La probabilidad de que se produzca es muy
+baja.
+Tipo B: Fallo en los sistemas de
+comunicación intermitentes durante un
+periodo inferior a cuatro horas. La gravedad
+de esta amenaza puede considerarse como
+media puesto que cortes intermitentes en las
+comunicaciones afectan a los procesos
+realizados en el negocio. La probabilidad de
+que ocurra es baja pues debido a contadas
+modificaciones o actualizaciones a la
+configuración de la red interna, no es
+frecuente sufrir cortes de servicio a lo largo
+de un periodo breve de tiempo.
+Tipo A: Fallo en los sistemas anti intrusos
+de la red lo que provoca un agujero de
+seguridad del cual se aproveche alguien
+ajeno al negocio para introducirse en el
+sistema, inutilizar los sistemas de
+comunicación hacia el exterior (inutilizar el
+Router de comunicación) y, potencialmente,
+puede provocar una pérdida de información
+crítica para el negocio del cibercafé. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como muy alta porque un fallo
+de este tipo en las medidas de seguridad
+provocaría un grave perjuicio en el negocio,
+no tanto por la imposibilidad de comunicarse
+con el exterior como por la pérdida de
+23
+
+Causa
+
+Impacto
+correctamente o interceptar
+las mismas.
+Un fallo en los sistemas de
+seguridad
+en
+las
+comunicaciones
+del
+negocio puede provocar
+graves
+problemas
+de
+seguridad y cortes en las
+comunicaciones lo que
+puede producir, desde
+pérdidas importantes de
+información
+a
+la
+imposibilidad de comunicar
+al cibercafé con el exterior,
+al menos, vía Internet.
+
+Red pública
+ajena (Internet)
+
+Dentro del negocio del
+cibercafé si bien existe una
+dependencia
+con
+la
+infraestructura
+de
+red
+pública suministrada por el
+proveedor,
+las
+únicas
+comunicaciones de red
+gestionadas por el negocio
+son hacia el interior por lo
+tanto los fallos en la red
+externa se gestionarían
+directamente
+con
+el
+proveedor de Internet.
+
+Nivel
+información valiosa. La probabilidad de que
+se produzca es baja pues dentro del
+cibercafé
+se
+tienen
+adecuadamente
+instaladas medidas anti intrusos y se presta
+atención a su mantenimiento y actualización.
+Tipo M: No se contempla este tipo para esta
+amenaza.
+Tipo B: Fallo de las medidas de seguridad
+de acceso al Router del cibercafé lo que
+puede provocar que alguien ajeno a éste
+intente introducirse en la configuración del
+Router y la cambie para impedir el acceso
+desde adentro al exterior. La gravedad de
+esta amenaza puede considerarse como
+baja pues, aunque se produjera la situación
+no se producirían daños importantes en los
+procesos de negocio por el hecho de poder
+realizar un reinicio del Router para que
+vuelva a su configuración inicial y pueda ser
+nuevamente
+configurado
+con
+las
+características necesarias del cibercafé. La
+probabilidad de que ocurra es baja debido a
+que, el acceso al Router, está perfectamente
+protegido mediante contraseña.
+Tipo A: Fallo en los sistemas de
+comunicación informática pública durante un
+tiempo superior a 48 horas. La gravedad de
+la amenaza puede considerarse como muy
+alta porque un fallo en las comunicaciones
+informáticas afectará especialmente al
+negocio del cibercafé. La probabilidad de
+que se produzca es muy baja.
+Tipo M: Fallo en los sistemas de
+comunicación informática durante un tiempo
+no superior a 48 horas. La gravedad de la
+amenaza puede considerarse como alta por
+los mismos motivos que ocurren en el tipo A.
+La probabilidad de que se produzca es muy
+baja.
+Tipo B: Fallo en los sistemas de
+comunicación intermitentes durante un
+periodo inferior a 24 horas. La gravedad de
+esta amenaza puede considerarse como
+media puesto que cortes intermitentes en las
+comunicaciones externas afectan a los
+procesos realizados en el negocio. La
+probabilidad de que ocurra es baja pues
+debido a que el proveedor realiza
+mantenimientos a su infraestructura en un
+horario en el que no opera el negocio, por
+
+24
+
+Causa
+
+Impacto
+
+Fallo en
+soportes de
+copias de
+seguridad
+
+Dentro
+del
+cibercafé
+existen soportes con copias
+de seguridad (backup)
+genéricas para los equipos,
+sin embargo, no existen
+políticas o formalización
+alguna
+sobre
+el
+mantenimiento de éstas.
+
+Archivos
+
+Debido a que no existen
+bases de datos en el
+funcionamiento
+del
+cibercafé,
+toda
+la
+información se encuentra
+almacenada en archivos
+electrónicos, por lo tanto, si
+se producen fallos en
+archivos específicamente
+de usos administrativos, los
+cuales no se encuentran
+replicados, los problemas
+para el negocio pueden ser
+graves.
+
+Nivel
+tanto, no es frecuente sufrir cortes de
+servicio.
+Tipo A: Fallo en todos los soportes con
+copias de seguridad o pérdida de
+información almacenada en estos. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como muy alta porque
+perjudicará gravemente el negocio del
+cibercafé, aunque la probabilidad de que se
+produzca es baja.
+Tipo M: Fallo en alguno de los soportes
+durante un tiempo inferior a una semana, sin
+pérdida de ningún tipo de información crítica
+para el negocio. La gravedad de la amenaza
+puede considerarse como media, y la
+probabilidad de que se produzca es baja.
+Tipo B: Fallo en algún soporte durante un
+tiempo inferior a 24 horas o pequeños fallos
+durante ese tiempo sin darse pérdida de
+información. La gravedad de esta amenaza
+puede considerarse como baja y la
+probabilidad de que ocurra es media/baja.
+Tipo A: Pérdida de archivos con información
+muy crítica sobre los negocios que mantiene
+el cibercafé o la empresa. La gravedad de la
+amenaza puede considerarse como muy
+alta debido a que la información no está
+replicada en ningún otro equipo, ni
+generalmente, en ningún otro soporte, la
+pérdida del archivo es irreparable o
+demasiado costosa su recuperación. La
+probabilidad de que se produzca es media
+debido a que dentro del negocio únicamente
+se cuenta con una copia de cada archivo
+almacenado.
+Tipo M: Pérdida temporal (no superior a 48
+horas) del acceso a archivos con
+información crítica para el negocio. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como alta debido a que puede
+afectar al retraso de alguna de las
+operaciones del negocio si no puede
+acceder momentáneamente a información
+importante. La probabilidad de que se
+produzca es media.
+Tipo B: Pérdida temporal (no superior a 24
+horas) del acceso a archivos sin demasiada
+importancia para el negocio. La gravedad de
+esta amenaza puede considerarse como
+baja puesto que la importancia de la
+información almacenada en esos archivos
+25
+
+Causa
+
+Procedimientos
+de seguridad de
+la información
+del usuario
+
+Planes de
+contingencia de
+información del
+usuario
+
+Errores y
+ataques de
+personas
+internas
+
+Impacto
+
+Nivel
+no es extremada y no repercutiría en el
+correcto funcionamiento del cibercafé. La
+probabilidad de que ocurra es media.
+Dentro del cibercafé no se < No aplica >
+dispone de procedimientos
+de seguridad para la
+información debido a que,
+al cierre del día, las
+sesiones de trabajo en los
+equipos son restablecidas
+por lo tanto esta amenaza
+no es aplicable.
+Dentro del cibercafé no se < No aplica >
+dispone de un plan de
+contingencia
+para
+la
+información de usuarios por
+lo tanto esta amenaza no
+es aplicable.
+El cibercafé únicamente Tipo A: Acceso al sistema de la empresa o
+cuenta con un empleado, el del cibercafé y pérdida de información de la
+cual no tiene participación operación en marcha, la cual es crucial para
+dentro del negocio por lo una buena finalización del negocio y para la
+que existe la posibilidad de empresa. La gravedad de la amenaza puede
+que
+atente considerarse como muy alta debido a que la
+intencionadamente contra información sustraída es de máxima utilidad
+el negocio.
+para la empresa. La probabilidad de que se
+produzca es media debido a que el cibercafé
+cuenta con medidas de protección, sin
+embargo, carece de políticas lo que
+sugeriría que la información no este del todo
+protegida.
+Tipo M: Acceso a los sistemas de la
+empresa o del cibercafé y pérdida de
+información de negocios ya concluidos por
+la empresa. La gravedad de la amenaza
+puede considerarse como alta debido a que,
+a pesar de haber concluido el negocio, la
+información de este es un importante activo
+para futuros negocios. La probabilidad de
+que se produzca es media debido a que el
+cibercafé cuenta con medidas de protección,
+sin embargo, carece de políticas lo que
+sugeriría que la información no este del todo
+protegida.
+Tipo B: Acceso a los sistemas de la
+empresa o del cibercafé y pérdida de
+información de poca importancia para
+alguno de éstos. La gravedad de esta
+amenaza puede considerarse como baja
+puesto que la importancia de la información
+perdida no es de gran importancia por lo que
+26
+
+Causa
+
+Errores y
+ataques de
+personas
+externas
+
+Robo
+
+Impacto
+
+Nivel
+no tendrá ningún efecto negativo en la
+empresa. La probabilidad de que se
+produzca es media debido a que el cibercafé
+cuenta con medidas de protección, sin
+embargo, carece de políticas lo que
+sugeriría que la información no este del todo
+protegida.
+Existe la posibilidad de que < No aplica >
+personal ajeno al cibercafé
+desee
+hacerse
+con
+información
+confidencial
+del negocio para usarla en
+beneficio propio.
+El giro del negocio de un
+cibercafé no basa sus
+operaciones en la retención
+de información como activo
+crítico. Por ello esta
+amenaza no es aplicable.
+Al igual que cualquier otro Tipo A: Robo de activos del negocio en el
+local o domicilio particular cual son sustraídos equipamientos y
+está expuesto a intentos de documentos en los que se almacenaba
+robos que pueden provocar información importante. La gravedad de la
+la pérdida de equipamiento amenaza puede considerarse como alta
+informático, documentación debido a que la información sustraída es de
+máxima utilidad para el cibercafé. La
+importante, etc.
+probabilidad de que se produzca es baja
+debido a que el local cuenta con las medidas
+de protección necesarias contra robos.
+Tipo M: Robo de activos del negocio en el
+cual son sustraídos equipamiento y
+documentación con información que, aun
+siendo importante, no es crucial para llevar
+a cabo correctamente el negocio. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como media debido a que, a
+pesar de que la información sustraída no es
+crítica, sí es importante y puede llegar a
+causar algún prejuicio la falta de esa
+información o equipo. La probabilidad de
+que se produzca es baja debido a que el
+local cuenta con las medidas de protección
+necesarias contra robos.
+Tipo B: Robo de activos del negocio en el
+cual son sustraídos equipamiento y
+documentación con información irrelevante
+para el negocio. La gravedad de esta
+amenaza puede considerarse como baja
+puesto que la importancia de la información
+perdida no es importante para llevar a cabo
+la operatividad del negocio. La probabilidad
+27
+
+Causa
+
+Impacto
+
+Pérdida no
+intencionada de
+activos
+
+Puesto que el cibercafé
+solo
+cuenta
+con
+un
+empleado y que no es socio
+de esta, pero, puede
+considerarse
+como
+confiable, no tendrá interés
+en que se pierda activos
+importantes
+para
+el
+negocio, sin embargo, a
+pesar del empeño que
+puede
+suponer
+dicho
+empleado en evitar el
+extravío de sus activos,
+siempre ocurren accidentes
+que pueden producir su
+pérdida
+
+Legislación
+
+El cibercafé, debido a su
+actividad, debe establecer
+políticas que expresen
+marcos normativos en su
+operación
+de
+negocio
+puesto que, actúa en
+Internet y cuenta con un
+empleado que trabaja con
+roles diversos por lo que
+deben ser protegidos y
+declarados
+sobre
+el
+prejuicioso uso de la
+infraestructura y que ponga
+en riesgo al negocio, así
+como a sus dueños o
+responsables.
+
+Nivel
+de que se produzca es baja debido a que el
+local cuenta con las medidas de protección
+necesarias contra robos.
+Tipo A: Pérdida no intencionada de activos
+muy críticos para el cibercafé debido a fallos
+del personal. La gravedad de la amenaza
+puede considerarse como muy alta debido a
+que los activos perdidos tienen una gran
+importancia para el desarrollo del negocio.
+La probabilidad de que se produzca es baja
+debido a que los empleados ponen especial
+cuidado en los bienes muebles más
+importante del local.
+Tipo M: Pérdida no intencionada de activos
+importantes para el cibercafé pero que no
+llegan a ser críticos para el desarrollo de su
+negocio. La gravedad de la amenaza puede
+considerarse como alta debido a que, pese
+la importancia de tales activos, no se corre
+un riesgo extremo con su pérdida. La
+probabilidad de que se produzca es baja
+debido a que los empleados ponen especial
+cuidado en los bienes muebles más
+importante del local.
+Tipo B: Pérdida de activos no importantes
+para el cibercafé debido a fallos del
+personal. La gravedad de esta amenaza
+puede considerarse como baja, puesto que
+la importancia de la información perdida no
+es importante para llevar a cabo el desarrollo
+del negocio. La probabilidad de que se
+produzca es baja debido a que los
+empleados ponen especial cuidado en los
+bienes muebles más importante del local.
+Tipo A: Sanciones penales que involucran
+acciones legales en contra de los dueños o
+responsables del negocio provocando la
+clausura definitiva del mismo. La gravedad
+de la amenaza puede considerarse como
+muy alta debido a que derivaría en pérdidas
+monetarias severas o encarcelamiento de
+los involucrados. La probabilidad de que se
+produzca es baja debido a que los
+empleados ponen especial cuidado en el
+uso que se le da a los activos del negocio.
+Tipo M: Sanciones administrativas que
+involucren acciones legales en contra de la
+operativa del negocio al impedir el acceso al
+inmueble durante un tiempo no superior a un
+mes. La gravedad de la amenaza puede
+considerarse como alta debido a que
+28
+
+Causa
+
+Terrorismo
+(vandalismo)
+
+Reputación
+(imagen del
+negocio)
+
+Impacto
+Nivel
+derivaría
+en
+pérdidas
+monetarias severas.
+Actualmente el cibercafé no
+La
+probabilidad
+de
+que
+se produzca es baja
+cuenta
+con
+políticas
+debido
+a
+que
+los
+empleados
+ponen especial
+documentadas.
+cuidado en el uso que se le da a los activos
+del negocio.
+Tipo B: Multas administrativas no
+superiores a $5,000 pesos mexicanos. La
+gravedad
+de
+la
+amenaza
+puede
+considerarse como alta debido a que
+derivaría en pérdidas monetarias severas.
+La probabilidad de que se produzca es baja
+debido a que los empleados ponen especial
+cuidado en el uso que se le da a los activos
+del negocio.
+La colonia Buenavista en Tipo A: Destrucción completa del inmueble
+Iztapalapa, lugar donde se donde se localiza el cibercafé debido a un
+ubica el cibercafé, no ha atentado vandálico con la consiguiente
+sido
+históricamente pérdida de todos los activos que estuvieran
+objetivo
+de
+grandes ubicados allí. La gravedad de la amenaza
+atentados vandálicos, sin puede considerarse como muy alta debido a
+embargo, sí se han que se perderán todos los activos más
+perpetrado algunos en importantes del negocio. La hipótesis de que
+especial dirigido a negocios se produzca es baja debido a que existen
+de servicios de abarrotes.
+pocas probabilidades de que se lleve a cabo
+un atentado de esa magnitud en el lugar.
+Tipo M: Atentado vandálico que afecte a
+parte del inmueble e impida el acceso al
+mismo durante un tiempo no superior a un
+mes. La gravedad de la amenaza puede
+considerarse como alta debido a que a
+paralizaría parte de la actividad del negocio
+durante el tiempo que no se pudiera acceder
+a su sede. La hipótesis de que se produzca
+es baja debido a que existen pocas
+probabilidades de que se lleve a cabo un
+atentado de esa magnitud en el lugar.
+Tipo B: Atentado vandálico que afecte a
+parte del edificio e impida el acceso al
+inmueble durante un tiempo no superior a
+una semana. La gravedad de esta amenaza
+puede considerarse como media/baja
+puesto que podría paralizar parte de la
+actividad del negocio durante el tiempo que
+no se pueda acceder a su sede. La
+probabilidad de que se produzca es
+media/baja.
+El ámbito empresarial, < No aplica >
+sobre el cual desarrollan
+sus servicios y actividades
+los cibercafés, pertenece a
+un sector en el que ningún
+29
+
+Causa
+
+Insolvencia de
+servicios
+externos
+
+Impacto
+cibercafé se conoce entre
+sí (no existe una unidad
+gremial), pero el “público”
+general suele reconocer.
+En el ámbito inmobiliario la
+imagen de un cibercafé se
+conforma mayormente por
+la atención o nivel de
+servicio ofrecido que por
+los activos inmobiliarios
+que se poseen.
+Centrándose en el tema
+informático, una posible
+pérdida de información por
+parte del cibercafé no
+afectaría excesivamente a
+su imagen por lo tanto esta
+amenaza no es aplicable.
+Para llevar a cabo la
+contabilidad del cibercafé,
+se dispone de un software
+elaborado a medida por
+una pequeña empresa
+externa que se encarga
+también
+de
+su
+mantenimiento.
+
+Nivel
+
+Tipo A: Que la empresa externa que ha
+desarrollado y mantiene el software de
+contabilidad
+desaparezca
+con
+el
+consiguiente perjuicio de la pérdida del
+mantenimiento del Software. La gravedad de
+la amenaza puede considerarse como
+media/alta debido a que el software de
+contabilidad es muy importante para el
+desarrollo normal de las actividades de la
+empresa, entre ellas la del cibercafé. La
+probabilidad de que se produzca es
+media/baja.
+Tipo M: Problemas de la empresa externa
+que ha desarrollado y mantiene el software
+de contabilidad que imposibilitan que den un
+servicio adecuado durante un periodo no
+superior a un mes. La gravedad de la
+amenaza puede considerarse como baja
+debido a que el mantenimiento del software
+no se requiere todos los meses. La
+probabilidad de que se produzca es
+media/baja.
+Tipo B: Problemas de la empresa externa
+que ha desarrollado y mantiene el software
+de contabilidad que imposibilitan que den un
+servicio adecuado durante un periodo no
+superior a una semana. La gravedad de la
+amenaza puede considerarse como muy
+baja debido a que el mantenimiento del
+software no se requiere todas las semanas.
+La probabilidad de que se produzca es
+media/baja.
+
+Tabla 3. Amenazas genéricas para el cibercafé.
+
+30
+
+3. Prácticas actuales de seguridad en los activos
+El cibercafé contempla medidas básicas de seguridad sobre sus activos, a continuación,
+se describen solo aquellos activos que tienen en consideración por lo menos alguna
+medida de seguridad, dando por entendido que fuera de estos no existen medidas de
+protección para los activos no mencionados.
+§
+
+§
+
+§
+§
+
+§
+
+Equipos de cómputo: En cuanto al software contenida en las estaciones de
+trabajo del cibercafé, se aplican las actualizaciones de manera periódica por lo
+menos en los aplicativos de licenciamiento gratuito. Del lado del hardware, se
+mantienen conectados los equipos a reguladores con protección de picos
+eléctricos, se cuentan con ventiladores para mantener un ambiente por lo menos
+a temperatura ambiente, se tiene un extintor para prevenir daños mayores por
+incendios y se cuenta con el servicio de alarma en caso de detección de humo. Si
+ocurriese un daño físico a determinado equipo, se cuenta con un respaldo
+“backup” del mismo.
+Router: Se mantiene en un lugar seguro y lejos del alcance de personas ajenas,
+posee contraseña de acceso que solo conoce el personal por si requiriese de
+alguna modificación o solución de problemas en la red.
+Información: La información de archivos específicos de configuración o de
+negocio se encuentran respaldados en la nube.
+Robo de bienes muebles: La alarma provista por el proveedor cuenta con la
+función de Pánico, además se tiene una cámara de video vigilancia justo adentro
+del cibercafé. Las alarmas se encuentran activas las 24 horas del día y se
+programa cada noche para mantenerla en estado de vigilancia cuando no se
+encuentra nadie dentro de las instalaciones. La zona donde se encuentran
+equipos de cómputo y bienes propios de la empresa dueña también del cibercafé
+cuenta con una reja perimétrica que se mantiene siempre cerrada.
+Actos vandálicos sobre el inmueble: Se posee un directorio con teléfonos de
+emergencia, aunque la única medida contra actos vandálicos es la lucha de los
+cuerpos de seguridad del estado.
+
+4. Activos o componentes críticos
+El cibercafé no cuenta como tal con un análisis de impacto al negocio, por lo que, en el
+entendido de que son los dueños de éste quienes conocen las necesidades básicas para
+una correcta operativa y en procuración de que las obligaciones y/o servicios que ofrece
+el cibercafé no merme en las ganancias, serán ellos quienes con base en las amenazas
+descritas anteriormente identifiquen los activos o componentes críticos. A continuación,
+se enlistan los activos identificados como críticos:
+31
+
+Activo crítico
+Local (inmueble)
+
+Equipos de cómputo
+
+Router
+
+Switch
+
+Proveedor del servicio de
+Internet
+
+Soportes físicos de Backups
+
+Justificación
+El cibercafé brinda sus servicios a través de su única sede,
+la empresa no cuenta con red de sucursales que puedan
+continuar con la operación del negocio en caso de
+contingencias.
+Las terminales fijas o móviles que brinda el cibercafé a sus
+clientes son de vital importancia, sin ellos no habría negocio.
+En particular existe un equipo con permisos administrativos
+y que funge como nodo principal en la topología de red, en
+este equipo además, se encuentra el aplicativo
+CyberAdmin Free Servidor.
+Componente que se encarga de establecer y proveer
+conexión de la red externa a la interna, sin este elemento se
+carecería de la puerta de enlace a Internet y la seguridad
+que su software integrado brinda, en particular el Firewall
+sería crítico.
+Componente que permite configurar la red interna del
+cibercafé, sin este elemento podría otorgarse el servicio,
+aunque en menor número de equipos (por las características
+del switch que se posee) y con menor grado de seguridad
+de cara a la conexión de red externa.
+Es un activo de comunicación vital para el negocio del
+cibercafé sin el servicio de Internet difícilmente existiría
+demanda por parte de los clientes, máxime en determinadas
+horas del día o temporadas del año.
+Dado que por el tamaño de las imágenes de restauración de
+los equipos no es óptimo tenerlas en la nube como quizás si
+pudiesen ser los archivos de información (de texto plano),
+los soportes físicos (USB, discos duros externos, entre otros)
+son importantes ante cualquier eventualidad anómala en el
+Sistema Operativo del equipo, no poseer una imagen de
+respaldo podría inutilizar el equipo afectado y así pues,
+reducir la oportunidad de negocio.
+
+Tabla 4. Activos o componentes críticos.
+
+5. Vulnerabilidades sobre los activos críticos
+En este apartado se van a valorar las diferentes vulnerabilidades encontradas para los
+componentes críticos del cibercafé.
+Para analizar el impacto que pudieran provocar tales vulnerabilidades se usarán los
+siguientes tres criterios de valoración:
+§
+
+Riesgo:
+- Muy alto: El cibercafé experimenta una combinación de debilidades y
+tendencias adversas que están en un punto en que la continuidad del
+negocio está en duda. Es necesario que se promuevan acciones
+correctivas y se ejerza seguimiento continuo.
+32
+
+-
+
+-
+
+-
+
+Alto: El cibercafé opera en condiciones inaceptables en cuanto al riesgo
+que asumen. Está presente una gran probabilidad de falla operacional y/o
+información financiera pero las debilidades no son tan severas como para
+comprometer una inmediata falla en los sistemas informáticos. Es
+necesario que se promuevan acciones correctivas de urgencia.
+Moderado: El cibercafé experimenta una combinación de factores
+adversos que requiere acciones correctivas de relativa urgencia. Los
+problemas están identificados y requieren preocupación y monitoreo
+superior a lo normal.
+Bajo: El cibercafé cuenta con controles que mitigan el nivel de riesgo. Si
+hay deficiencias, éstas son de naturaleza menor y pueden ser fácilmente
+administradas.
+
+§
+
+Probabilidad:
+- Certeza: Ocurrencia de por lo menos una vez en 2 días.
+- Probablemente: Puede suscitarse de una hasta 3 veces al mes.
+- Moderada: Se presentaría de 2 y hasta 4 veces al año.
+- Improbable: Solo pasaría una vez al año.
+- Rara: Aparecería de una a 3 veces en un periodo de 5 años.
+
+§
+
+Consecuencias:
+- Catastróficas: Las pérdidas para el cibercafé son importantísimas e
+irreparables.
+- Mayores: Las pérdidas para el cibercafé son muy importantes, pero
+pueden tener un remedio al mediano o largo plazo.
+- Moderadas: Las pérdidas son importantes, pero tienen una solución en
+corto plazo.
+- Menores: Se producen pérdidas mínimas sin gran impacto dentro del
+cibercafé.
+- Insignificantes: No se producen pérdidas o éstas son insignificantes y no
+afectan prácticamente en ningún grado al cibercafé.
+
+De este modo, se resumiría en una tabla con valores de ponderación de impacto la
+siguiente:
+
+4
+3
+2
+1
+-
+
+Riesgo
+Muy Alto
+Alto
+Moderado
+Bajo
+-
+
+5
+4
+3
+2
+1
+
+Probabilidad
+Certeza
+Probablemente
+Moderada
+Improbable
+Rara
+
+5
+4
+3
+2
+1
+
+Consecuencias
+Catastróficas
+Mayores
+Moderadas
+Menores
+Insignificantes
+
+Tabla 5. Niveles de impacto en riesgo (NR), probabilidad (NP) y consecuencias (NC).
+
+33
+
+El factor de estos tres criterios otorga un valor de ponderación, el cual podría entenderse
+como el grado de riesgo existente sobre cada vulnerabilidad hallada en determinado
+activo crítico.
+Se procede entonces a identificar las vulnerabilidades que pueden tener tales activos
+desde tres vertientes: deliberadas, ambientales o accidentales; así como su ponderación:
+Activo
+Local
+(inmueble)
+
+Riesgo
+Acceso no
+autorizado
+
+Daño a las
+instalaciones
+por
+delincuentes.
+
+Robo de
+activos físicos.
+
+Inundación.
+
+Descripción
+
+Impacto
+
+Deliberado:
+Ubicación de
+personas ajenas
+a lugares
+restringidos
+dentro del local o
+bien, en horarios
+no permitidos.
+Deliberado:
+Sabotaje
+perpetuado al
+local de forma
+total o parcial con
+posibles pérdidas
+pecuniarias al
+negocio.
+
+Posible daño o
+pérdida de
+activos en la
+infraestructura
+del local o daños
+al mismo.
+
+Deliberado:
+Pérdida de
+activos físicos del
+negocio por parte
+de personas
+externas o
+internas
+(empleados).
+Ambiental:
+Imposibilidad de
+dar servicio por
+posibles
+inundaciones al
+interior del local.
+
+Pérdida o daño
+de activos y
+mala reputación
+del lugar que
+desemboca en
+pérdidas
+económicas
+para el negocio
+o incluso
+clientes.
+Pérdidas del tipo
+económico y de
+tiempo para
+garantizar la
+recuperación y
+volver a un
+estado “a punto”
+del negocio.
+Pérdida en
+costos de
+oportunidad al
+no poder realizar
+las operaciones
+del negocio.
+Costo
+económico si los
+activos de
+infraestructura
+se ven
+comprometidos.
+
+N
+R
+3
+
+N
+P
+2
+
+N
+C
+4
+
+Tota
+l
+24
+
+3
+
+3
+
+4
+
+36
+
+3
+
+4
+
+3
+
+36
+
+3
+
+2
+
+2
+
+12
+
+34
+
+Incendio.
+
+Legalidad.
+
+Equipos de
+cómputo
+
+Accidental: Falta
+de detectores de
+humo, extintores,
+señalamientos
+que adviertan de
+la presencia de
+material
+incendiable o
+restricciones al
+cliente.
+Accidental:
+Multas derivadas
+por temas de
+legislación o
+regulación.
+
+Daño a la
+infraestructura
+eléctrica.
+
+Accidental: Daño
+eléctrico derivado
+del incorrecto uso
+de la instalación
+eléctrica o diseño
+en la estructura
+(falta de tomas de
+corriente
+regulada).
+
+Empleados
+descontentos
+
+Deliberado: Un
+empleado
+descontento
+puede intentar
+deliberadamente
+alterar o destruir
+los datos de su
+computadora.
+Deliberado: Un
+intruso
+informático que
+intenta obtener
+acceso de forma
+ilegal a los
+equipos cuando
+se conectan a
+Internet.
+
+Ataque de
+hackers
+
+Pérdidas
+económicas
+severas
+derivadas del
+coste de
+infraestructura
+física y, en el
+peor de los
+casos, pérdidas
+humanas.
+Pérdida
+económica
+derivada del
+pago de
+sanciones y/o
+cierre del local.
+Pérdida
+económica en la
+reparación del
+daño y costos de
+oportunidad para
+el negocio.
+
+4
+
+2
+
+4
+
+32
+
+4
+
+2
+
+5
+
+40
+
+2
+
+3
+
+2
+
+12
+
+Pérdida de
+información o
+incorrecta
+gestión sobre los
+activos,
+pudiendo derivar
+en pérdidas
+económicas.
+Una vez que
+logra obtener
+acceso, puede
+robar o dañar los
+datos
+almacenados en
+ella.
+
+2
+
+2
+
+2
+
+8
+
+2
+
+3
+
+2
+
+12
+
+35
+
+Robo físico
+
+Robo virtual
+
+Daño por
+desastres
+naturales
+
+Deliberado:
+Cualquier
+persona con
+acceso al local
+puede sustraer el
+equipo de
+cómputo o sus
+componentes si
+tiene acceso a
+ella. Con la
+popularidad
+adquirida por las
+computadoras
+portátiles, el robo
+físico de
+computadoras se
+convirtió en un
+hecho muy
+habitual.
+Deliberado:
+Posible robo de
+identidad, donde
+un hacker puede
+robar información
+personal para
+usurpar su
+identidad e
+incluso
+chantajear con
+ella. Con esta
+identidad falsa, el
+hacker puede
+obtener acceso a
+sus recursos
+financieros o
+realizar alguna
+actividad ilegal.
+Ambiental: Daño
+provocado por
+terremotos o
+inundaciones
+principalmente,
+que deterioren
+los equipos al
+grado de poder
+dejarlos
+inservibles por
+completo.
+
+Pérdida
+económica por
+los costos de
+recuperación de
+los bienes
+sustraídos.
+
+3
+
+4
+
+3
+
+36
+
+Si la máquina
+involucrada es
+considerada
+crítica para el
+negocio podría
+derivar en algún
+costo económico
+adverso.
+
+2
+
+1
+
+2
+
+4
+
+Pérdidas
+económicas
+para la
+recuperación o
+reparación de
+los equipos
+dañados.
+
+3
+
+1
+
+4
+
+12
+
+36
+
+Calor o frío
+extremos
+
+Problemas de
+voltaje
+
+Ambiental: La
+mayoría de los
+componentes
+internos de una
+computadora
+están diseñados
+para funcionar
+dentro de un
+intervalo
+específico de
+temperatura. En
+el caso de
+producirse calor o
+frío excesivos, es
+posible que
+algunos de ellos
+empiecen a
+funcionar
+incorrectamente y
+sea necesario
+sustituirlos.
+Ambiental: El
+sobre voltaje o
+los picos son un
+aumento
+repentino del
+voltaje de
+alimentación que
+puede dañar
+permanentement
+e algunos de los
+componentes de
+la computadora.
+Puede producirse
+por un rayo que
+cae con una gran
+cantidad de carga
+eléctrica. Esta
+carga se
+transmite por las
+líneas
+telefónicas.
+
+Pérdida de
+oportunidad de
+negocio al
+indisponer de un
+equipo o mala
+reputación del
+negocio ante los
+clientes.
+
+1
+
+2
+
+1
+
+2
+
+Un aumento
+repentino del
+voltaje puede
+destruir la placa
+base de la
+computadora y
+en consecuencia
+derivar en
+gastos de
+recuperación del
+equipo.
+
+3
+
+4
+
+3
+
+36
+
+37
+
+Incendios
+
+Errores
+humanos
+
+Accidental: Los
+incendios pueden
+dañar los equipos
+de manera
+permanente.
+Incluso si el
+fuego no alcanza
+directamente al
+equipo, el calor
+provocado es
+suficiente para
+fundir los
+delicados
+componentes de
+su interior.
+Además, el humo
+contiene unas
+partículas
+diminutas que
+pueden dañar la
+computadora,
+especialmente el
+disco duro.
+Accidental:
+Muchas veces,
+los daños
+producidos en
+una computadora
+se deben a un
+error humano no
+intencionado
+como la
+eliminación por
+error de un
+archivo
+importante que
+provoque el mal
+funcionamiento
+del sistema.
+
+Pérdida
+irrecuperable de
+los equipos
+dañados, en
+consecuencia,
+costos de
+recuperación y
+de oportunidad
+de negocio.
+
+2
+
+2
+
+4
+
+16
+
+Tiempo invertido
+en recuperar la
+estabilidad del
+equipo y que
+derive en costos
+de oportunidad
+para el negocio.
+
+1
+
+2
+
+1
+
+2
+
+38
+
+Router
+
+Virus
+informático
+
+Accidental: Un
+cliente puede
+accidentalmente
+introducir a la red
+del cibercafé
+programas
+diseñados para
+dañar los datos
+almacenados en
+los equipos (p. ej.
+programa
+maligno,
+troyanos,
+spyware, adware,
+etc.).
+
+Si la máquina
+involucrada es
+considerada
+crítica para el
+negocio podría
+derivar en algún
+costo económico
+adverso.
+
+3
+
+5
+
+3
+
+45
+
+Acceso no
+autorizado.
+
+Deliberado:
+Ingreso por parte
+de un usuario
+ajeno a la red.
+Deliberado:
+Saturación de los
+puertos con flujo
+de información,
+haciendo que el
+dispositivo se
+sobrecargue y no
+puedan seguir
+prestando
+servicios.
+Deliberado:
+Establecimiento
+de un servidor
+DHCP intruso con
+parámetros de
+Gateway o DNS
+alterados, en
+consecuencia, el
+servidor intruso
+responde antes a
+los clientes
+DHCP que están
+en su mismo
+segmento.
+
+Robo y/o
+alteración de
+información
+propia o ajena.
+Pérdida
+temporal del
+servicio.
+
+3
+
+4
+
+3
+
+36
+
+1
+
+3
+
+2
+
+6
+
+El ataque
+permite que el
+intruso gestione
+el tráfico de
+salida del
+atacado y
+lógicamente
+pueda analizarlo
+y/o almacenarlo.
+
+3
+
+4
+
+3
+
+36
+
+Denegación de
+servicio.
+
+Suplantación
+de identidad.
+
+39
+
+Ataque de
+inanición.
+
+Switch
+
+Deliberado:
+Inundación con
+peticiones DHCP
+al servidor
+utilizando
+diferentes
+direcciones MAC
+al punto de
+agotar por
+completo el
+espacio de
+direcciones
+asignables por
+los servidores
+DHCP por un
+período indefinido
+de tiempo.
+Interrupción
+Ambiental:
+del servicio de Indisponibilidad
+red.
+de los servicios.
+Daño por polvo Ambiental:
+u hongos.
+Unidad física sin
+limpieza periódica
+o ubicada en
+lugares húmedos.
+Daño físico al
+Accidental:
+dispositivo.
+Caídas, golpes,
+derrame de
+líquidos u otros
+que provoquen
+daños físicos y
+por tal un mal
+funcionamiento
+de la unidad.
+
+Los clientes de
+la red de la
+víctima entonces
+no obtendrán
+automáticament
+e una IP para
+acceder a la red
+por lo habría una
+denegación de
+servicio.
+
+2
+
+3
+
+3
+
+18
+
+Degradación del
+servicio de cara
+al cliente.
+Pérdida
+temporal del
+servicio.
+
+4
+
+2
+
+3
+
+24
+
+1
+
+3
+
+3
+
+9
+
+Pérdida del
+servicio.
+
+3
+
+5
+
+3
+
+45
+
+Acceso no
+autorizado.
+
+Robo y/o
+alteración de
+información
+propia o ajena.
+El atacante
+puede ver (y en
+consecuencia
+analizar) todas
+las tramas
+enviadas por la
+host víctima a
+otro host que no
+posee una
+entrada en la
+tabla de
+direcciones.
+
+3
+
+3
+
+3
+
+27
+
+3
+
+2
+
+3
+
+18
+
+Ataque
+flooding de
+MAC.
+
+Deliberado:
+Ingreso por parte
+de un usuario
+ajeno a la red.
+Deliberado:
+Comportamiento
+por defecto del
+dispositivo tipo
+Switch donde se
+reenvían tramas
+por todos los
+puertos
+provocado por
+una MAC no
+encontrada en el
+sistema de tablas
+de direcciones
+del dispositivo.
+
+40
+
+Ataque de
+Telnet.
+
+Deliberado:
+Impide el acceso
+a administración
+y/o usuarios al
+switch. A través
+de una debilidad
+de Telnet que
+impide el acceso
+mediante Telnet.
+
+El atacante
+podría
+decodificar
+contraseñas
+utilizadas y
+hacerse de
+información o
+provocar una
+pérdida del
+servicio.
+Daño por polvo Ambiental:
+Pérdida
+u hongos.
+Unidad física sin
+temporal del
+limpieza periódica servicio.
+o ubicada en
+lugares húmedos.
+Daño físico al
+Accidental:
+Pérdida del
+dispositivo.
+Caídas, golpes,
+servicio.
+derrame de
+líquidos u otros
+que provoquen
+daños físicos y
+por tal un mal
+funcionamiento
+de la unidad.
+
+4
+
+2
+
+4
+
+32
+
+1
+
+3
+
+3
+
+9
+
+3
+
+3
+
+2
+
+18
+
+Proveedor
+del servicio
+de Internet
+(ISP)
+
+Indisponibilida
+d del servicio.
+
+Pérdida directa
+al negocio que
+genera costos
+de oportunidad.
+
+3
+
+2
+
+3
+
+18
+
+Soportes
+físicos de
+backups
+
+Robo físico
+
+Pérdida de
+información o
+ajustes
+sensibles para el
+correcto
+funcionamiento
+de los equipos.
+Pérdida total o
+parcial de la
+información en
+el respaldo.
+
+3
+
+3
+
+4
+
+36
+
+1
+
+1
+
+3
+
+3
+
+Ambiental: El
+servicio de
+Internet que
+ofrece el
+proveedor se
+encuentra
+inhabilitado
+temporalmente.
+
+Deliberado:
+Cualquier
+persona con
+acceso al local
+puede sustraer
+los medios de
+backups.
+Daño por polvo Ambiental:
+u hongos.
+Unidad física sin
+limpieza periódica
+o ubicada en
+lugares húmedos.
+
+41
+
+Daño físico al
+dispositivo.
+
+Virus
+informático
+
+Firewall
+
+Inadecuada
+configuración
+
+Software para
+evasión del
+firewall.
+
+No hay
+vigilancia ni
+reglas de
+manipulación
+en los puertos.
+
+Accidental:
+Caídas, golpes,
+derrame de
+líquidos u otros
+que provoquen
+daños físicos y
+por tal un mal
+funcionamiento
+de la unidad.
+Accidental:
+Intrusión de
+programas
+diseñados para
+dañar los datos
+almacenados en
+los medios con
+permiso de
+escritura (p. ej.
+malware,
+troyanos,
+spyware, adware,
+etc.).
+
+Pérdida total o
+parcial de la
+información en
+el respaldo.
+
+3
+
+2
+
+2
+
+12
+
+Si el medio
+involucrado
+contiene datos
+críticos para el
+negocio podría
+derivar en algún
+costo económico
+adverso.
+
+3
+
+2
+
+2
+
+12
+
+Deliberado: Que
+el firewall sea
+demasiado
+severo o
+permisivo en sus
+reglas de acceso.
+Deliberado: Uso
+indebido por
+parte de los
+usuarios de un
+software para
+enmascaramiento
+de URL y así
+evadir las
+barreras del
+firewall.
+Deliberado:
+Cualquier usuario
+puede solicitar la
+apertura de
+alguna aplicación
+o puerto, sin
+justificación para
+ello.
+
+Acceso a
+Internet
+excesivamente
+restringido o
+excesivamente
+libre.
+Exposición de
+información y
+mal uso del
+servicio de
+Internet,
+pudiendo caer
+en lo ilegal.
+
+2
+
+3
+
+1
+
+6
+
+3
+
+3
+
+2
+
+18
+
+Riesgo en la red
+interna ante una
+mala
+administración
+del firewall.
+
+3
+
+4
+
+3
+
+36
+
+42
+
+CyberAdmi
+n Free
+Servidor
+
+Software
+obsoleto.
+
+Accidental: El
+software del
+firewall no está
+actualizado.
+
+Incremento de
+posibilidad en
+factibilidad de
+vulnerabilidades
+informáticas por
+falta de parches,
+entre otros.
+
+2
+
+3
+
+2
+
+12
+
+Permiso no
+restringido
+sobre el
+programa.
+
+Deliberado:
+Cualquier usuario
+puede manipular
+el programa e
+impedir el
+funcionamiento
+adecuado.
+
+4
+
+3
+
+3
+
+36
+
+Software
+obsoleto.
+
+Accidental: El
+programa no está
+actualizado y
+puede presentar
+fallos o
+inestabilidad en
+su
+funcionamiento.
+
+Dado que es un
+programa que
+gestiona las
+tarifas por el
+servicio que
+brinda el
+cibercafé, podría
+impactar en el
+cobro a los
+clientes y por tal
+un impacto
+monetario
+adverso al
+negocio.
+Incremento de
+posibilidad en
+factibilidad de
+vulnerabilidades
+informáticas por
+falta de parches,
+entre otros.
+
+2
+
+2
+
+3
+
+12
+
+Tabla 6. Detección de vulnerabilidades y su ponderación en los activos considerados como críticos.
+
+6. Clasificación de riesgo de los activos críticos
+Con base en la ponderación del grado de riesgo, el presente estudio utilizará una tabla
+de clasificación de riesgo para determinar los niveles de severidad respectivos. La tabla
+de intervalos de clasificación a considerar será la siguiente:
+Clasificación de riesgo
+Muy alto
+Alto
+Medio
+Bajo
+Muy bajo
+
+Mínimo
+70
+35
+16
+6
+0
+
+Máximo
+100
+69
+34
+15
+5
+
+Tabla 7. Clasificación de riesgo.
+
+43
+
+
